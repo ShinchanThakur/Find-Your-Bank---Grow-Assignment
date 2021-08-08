@@ -2,7 +2,7 @@ import React from 'react';
 import { AgGridColumn, AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-alpine.css';
-import Modal from './modal'
+import Modal from './modal';
 import { Container, Dropdown} from 'react-bootstrap';
 import '../styles/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -24,7 +24,7 @@ class table extends React.Component {
     }
     handleShow = (res) => {
         this.setState({ show: true, modalData: res });
-        this.props.history.push('/modal');
+        // this.props.history.push('/modal');
     }
 
     columnDefs = {

@@ -22,6 +22,20 @@ export default class favourites extends React.Component{
     render(){
         return(
             <Container>
+                {this.state.rowData.length === 0 ? 
+                
+                <div>
+                    <img width="35%" height="20%" className="notFound" src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-2506.jpg?size=626&ext=jpg&ga=GA1.2.668480129.1628294400"/>
+                    <br/>
+                     <h8>Uh Oh! Looks like the table is empty. Add some banks to your favourites by clicking on the star :(</h8>
+                </div>
+                
+                
+              
+               
+
+                
+                :
                         <div className="ag-theme-alpine" style={{marginTop:'83px', width: '99%', height: '500px' }}>
                             <AgGridReact
                                 defaultColDef={this.columnDefs}
@@ -38,7 +52,7 @@ export default class favourites extends React.Component{
                                 <AgGridColumn headerName="ADDRESS" field="address" flex="2" ></AgGridColumn>
 
                             </AgGridReact>
-                        </div>
+                        </div>}
             </Container>
         );
     }

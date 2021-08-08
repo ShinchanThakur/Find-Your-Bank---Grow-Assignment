@@ -113,7 +113,7 @@ export default class App extends React.Component {
           changeSearch={this.changeSearch} city={this.state.city} category={this.state.category} 
           searchTerm={this.state.searchTerm} />} />
           <Route path="/favourites" render={() => <Favourites favourites={this.state.favourites} />} />
-          {/* <Route path="/bank-details/:ifsc_code" render={() => <Modal rowData={this.state.rowData}/>} /> */}
+          <Route path="/bank-details/:ifsc_code" render={() => <Modal rowData={this.state.rowData}/>} />
         </Switch>
       </div>
     );

@@ -24,7 +24,8 @@ class table extends React.Component {
     }
     handleShow = (res) => {
         this.setState({ show: true, modalData: res });
-        // this.props.history.push('/modal');
+        const ifsc_code = res.ifsc;
+        this.props.history.push(`/bank-details/${ifsc_code}`);
     }
 
     columnDefs = {
@@ -65,6 +66,18 @@ class table extends React.Component {
             <Container>
                 {this.props.isLoading
                     ? <Spinner />
+                    : 
+                    
+                    this.props.rowData.length === 0 ? 
+                    
+                    <div>
+                    <img width="35%" height="20%" className="notFound" src="https://img.freepik.com/free-vector/no-data-concept-illustration_114360-2506.jpg?size=626&ext=jpg&ga=GA1.2.668480129.1628294400"/>
+                    <br/>
+                     <h8>Uh Oh! No Data Found :(</h8>
+                </div>
+                
+                    
+                    
                     : <>
 
                         <div className="ag-theme-alpine" style={{ width: '99%', height: '500px' }}>

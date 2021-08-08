@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Find-Your-Bank---Grow-Assignment/static/css/main.fc81b472.chunk.css",
+    "main.js": "/Find-Your-Bank---Grow-Assignment/static/js/main.7325199e.chunk.js",
+    "main.js.map": "/Find-Your-Bank---Grow-Assignment/static/js/main.7325199e.chunk.js.map",
+    "runtime-main.js": "/Find-Your-Bank---Grow-Assignment/static/js/runtime-main.48f404b3.js",
+    "runtime-main.js.map": "/Find-Your-Bank---Grow-Assignment/static/js/runtime-main.48f404b3.js.map",
+    "static/css/2.9bd9e1b5.chunk.css": "/Find-Your-Bank---Grow-Assignment/static/css/2.9bd9e1b5.chunk.css",
+    "static/js/2.d182553a.chunk.js": "/Find-Your-Bank---Grow-Assignment/static/js/2.d182553a.chunk.js",
+    "static/js/2.d182553a.chunk.js.map": "/Find-Your-Bank---Grow-Assignment/static/js/2.d182553a.chunk.js.map",
+    "static/js/3.29252ff5.chunk.js": "/Find-Your-Bank---Grow-Assignment/static/js/3.29252ff5.chunk.js",
+    "static/js/3.29252ff5.chunk.js.map": "/Find-Your-Bank---Grow-Assignment/static/js/3.29252ff5.chunk.js.map",
+    "index.html": "/Find-Your-Bank---Grow-Assignment/index.html",
+    "static/css/2.9bd9e1b5.chunk.css.map": "/Find-Your-Bank---Grow-Assignment/static/css/2.9bd9e1b5.chunk.css.map",
+    "static/css/main.fc81b472.chunk.css.map": "/Find-Your-Bank---Grow-Assignment/static/css/main.fc81b472.chunk.css.map",
+    "static/js/2.d182553a.chunk.js.LICENSE.txt": "/Find-Your-Bank---Grow-Assignment/static/js/2.d182553a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.48f404b3.js",
+    "static/css/2.9bd9e1b5.chunk.css",
+    "static/js/2.d182553a.chunk.js",
+    "static/css/main.fc81b472.chunk.css",
+    "static/js/main.7325199e.chunk.js"
+  ]
+}

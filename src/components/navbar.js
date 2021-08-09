@@ -12,7 +12,7 @@ export default class navbar extends React.Component {
           <Navbar.Brand className="navHeading" href="#home">Find Your Bank</Navbar.Brand>
 
           <div>
-            <NavLink exact style={{ textDecoration: 'none' }} className="menu-option" activeClassName="active_class" to="/">All Banks</NavLink>
+            <NavLink exact style={{ textDecoration: 'none' }} className="menu-option" activeClassName="active_class" to="/all-banks">All Banks</NavLink>
             <NavLink exact style={{ textDecoration: 'none' }} className="menu-option" activeClassName="active_class" to="/favourites">Favourites</NavLink>
 
           </div>

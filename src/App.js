@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBarHeader from './components/navbar';
 import React from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import AllBanks from './components/allbanks';
 import Favourites from './components/favourites';
 import Axios from 'axios';
@@ -107,13 +107,15 @@ export default class App extends React.Component {
       <div className="App">
         <NavBarHeader />
         <Switch>
-          <Route exact path="/" render={() => <AllBanks 
+          <Route exact path="/all-banks" render={() => <AllBanks 
           favourites={this.state.favourites} isLoading={this.state.isLoading} toogle={this.toogle} 
           rowData={this.state.rowData} changeCity={this.changeCity} changeCategory={this.changeCategory} 
           changeSearch={this.changeSearch} city={this.state.city} category={this.state.category} 
           searchTerm={this.state.searchTerm} />} />
           <Route path="/favourites" render={() => <Favourites favourites={this.state.favourites} />} />
           <Route path="/bank-details/:ifsc_code" render={() => <Modal rowData={this.state.rowData}/>} />
+          <Redirect exact from="/" to="/all-banks" />
+          <Redirect exact from="/Find-Your-Bank---Grow-Assignment" to="/all-banks" />
         </Switch>
       </div>
     );

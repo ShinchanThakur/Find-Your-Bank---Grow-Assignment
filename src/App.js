@@ -116,6 +116,7 @@ export default class App extends React.Component {
           <Route path="/bank-details/:ifsc_code" render={() => <Modal rowData={this.state.rowData}/>} />
           <Redirect exact from="/" to="/all-banks" />
           <Redirect exact from="/Find-Your-Bank---Grow-Assignment" to="/all-banks" />
+          <Redirect exact from="/gh-pages-url" to="/all-banks" />
         </Switch>
       </div>
     );

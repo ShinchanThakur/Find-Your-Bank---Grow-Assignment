@@ -3,8 +3,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Spinner from './Spinner';
 import '../styles/styles.css';
+import { withRouter } from 'react-router-dom';
 
-export default class modal extends React.Component {
+class modal extends React.Component {
 
     state = {
         isLoading: true,
@@ -14,6 +15,11 @@ export default class modal extends React.Component {
     componentDidMount() {
         const data = this.props.rowData.find((data) => data.ifsc == window.location.href.slice(-11));
         this.setState({ data: data, isLoading: false });
+    }
+
+
+    clickHandle = () =>{
+        this.props.history.push(`/all-banks`);
     }
 
     render() {
@@ -98,7 +104,7 @@ export default class modal extends React.Component {
 </div>
 
     </Card.Text>
-    <Button variant="primary" href="/all-banks">Go Back</Button>
+    <Button variant="primary" onClick={() => this.clickHandle() }>Go Back</Button>
   </Card.Body>
  
 </Card>
@@ -116,3 +122,5 @@ export default class modal extends React.Component {
         );
     }
 }
+
+export default withRouter(modal);

@@ -99,12 +99,12 @@ class table extends React.Component {
                                 rowSelection={'multiple'}
                             >
 
-                                <AgGridColumn headerName="" field="bank_name" width='15px' cellRendererFramework={(params)=><div id={params.data.ifsc}> <div onClick={()=>this.actionButton(params)}>{this.props.favourites.includes(params.data) ? <i className="fas fa-star"></i> : <i className="far fa-star"></i>}</div></div>}></AgGridColumn>
-                                <AgGridColumn headerName="BANK" field="bank_name" flex="1.5"></AgGridColumn>
-                                <AgGridColumn headerName="IFSC" field="ifsc" flex="1"  ></AgGridColumn>
-                                <AgGridColumn headerName="BRANCH" field="branch" flex="1" ></AgGridColumn>
-                                <AgGridColumn headerName="BANK ID" field="bank_id" flex="1" ></AgGridColumn>
-                                <AgGridColumn headerName="ADDRESS" field="address" flex="2" ></AgGridColumn>
+<AgGridColumn headerName="" field="bank_name" width='15px' cellRendererFramework={(params)=><div id={params.data.ifsc}> <div onClick={()=>this.actionButton(params)}>{this.props.favourites.includes(params.data) ? <i class="fas fa-star"></i> : <i class="far fa-star"></i>}</div></div>}></AgGridColumn>
+                                <AgGridColumn headerName="BANK" field="bank_name" width="270%" tooltipField="bank_name" ></AgGridColumn>
+                                <AgGridColumn headerName="IFSC" field="ifsc" width="200%"  tooltipField="ifsc"></AgGridColumn>
+                                <AgGridColumn headerName="BRANCH" field="branch" width="200%" tooltipField="branch"></AgGridColumn>
+                                <AgGridColumn headerName="BANK ID" field="bank_id" width="180%" tooltipField="bank_id"></AgGridColumn>
+                                <AgGridColumn headerName="ADDRESS" field="address" width="400%" tooltipField="address"></AgGridColumn>
 
                             </AgGridReact>
                             <div className='row' style={{ 'marginTop': '5px' }}>

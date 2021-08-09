@@ -32,8 +32,9 @@ export default class App extends React.Component {
 
     if (this.state.category !== category) {
       this.setState({ category: category }, () => {
-        if (this.state.category && this.state.searchTerm && this.state.category !== '' && this.state.searchTerm !== '')
+        if (this.state.category && this.state.searchTerm && this.state.category !== '' && this.state.searchTerm !== ''){
           this.setState({ rowData: this.state.secondaryData.filter(element => element[this.translate[this.state.category]].toString().includes(this.state.searchTerm.toUpperCase())) });
+        }
         else {
           this.setState({ rowData: this.state.secondaryData })
         }
@@ -62,14 +63,19 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+    let temp = JSON.parse(localStorage.getItem('Mumbai'));
+    console.log(temp);
+    this.setState({secondaryData: temp});
+    console.log('hello');
+    console.log(this.state.secondaryData);
     this.setState({ isLoading: true }, () => {
       Axios.get('https://vast-shore-74260.herokuapp.com/banks?city=MUMBAI').then((result) => {
         let temp = {};
         temp['MUMBAI'] = result.data;
         this.setState({ rowData: result.data, secondaryData: result.data, cache: temp, isLoading: false });
+        localStorage.setItem(this.state.city, JSON.stringify(this.state.secondaryData));
       })
     })
-
   }
 
   makeRequest = () => {
@@ -92,6 +98,7 @@ export default class App extends React.Component {
           this.setState({ rowData: this.state.secondaryData.filter(element => element[this.translate[this.state.category]].toString().includes(this.state.searchTerm.toUpperCase())) });
       })
     }
+    localStorage.setItem(this.state.city, JSON.stringify(this.state.secondaryData));
   }
 
   toogle = (row, flag) => {

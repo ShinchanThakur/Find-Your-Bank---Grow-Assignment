@@ -58,8 +58,6 @@
 }
 
 
-
-
 a.active_class{
     color:black;
     border-bottom: 2px solid #00d09c;
@@ -74,9 +72,19 @@ outline:none;
 
 }
 
-.notFound{
-    padding-top: 80px;
+.bank-info{
+    padding-top:100px;
 }
+
+.bank-name{
+    color:#00d09c !important;
+}
+
+.details-heading{
+    font-size: 30px;
+}
+
+
 @media only screen and (max-width: 800px){
     .col-6{
         width: 100% !important;
